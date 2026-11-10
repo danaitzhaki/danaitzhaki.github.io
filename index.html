@@ -109,5 +109,18 @@
 </main>
 <footer class="footer"><div class="shell"><span>© <span id="year"></span> Dana Etgar-Itzhaki</span><span>Economics research</span></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  
+<script>
+  const diagram = document.querySelector('.swarm-diagram svg');
+
+  if (diagram) {
+    const image = document.createElement('img');
+    image.src = 'assets/pso-diagram.png?v=3';
+    image.className = 'swarm-figure';
+    image.alt = 'Particle Swarm Optimization';
+    diagram.replaceWith(image);
+  }
+</script>
+
 </body>
 </html>
