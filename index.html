@@ -61,6 +61,28 @@
 .research-shell .section-heading {margin-bottom:12px}
 .split-section>div:nth-child(2) {padding-top:15px}
 @media(max-width:750px){.hero h1{font-size:clamp(2.5rem,8vw,3.5rem)}.section{padding-top:55px;padding-bottom:55px}.split-section>div:nth-child(2){padding-top:0}}
+
+/* Teaching: compact academic course and lecture links */
+.teaching-layout{display:grid;grid-template-columns:minmax(180px,.8fr) minmax(0,1.3fr);gap:72px;align-items:start}
+.teaching-heading h2{margin-bottom:10px}
+.teaching-small{margin:0;color:var(--muted);font-size:.92rem}
+.teaching-experience{margin:2px 0 26px;color:var(--muted);font-size:.98rem;max-width:580px}
+.teaching-course{border-top:1px solid var(--line);padding-top:22px}
+.teaching-kicker{font-size:.7rem;letter-spacing:.15em;font-weight:750;color:#70637e;margin:0 0 10px}
+.teaching-course h3{font-size:1.48rem;line-height:1.3;letter-spacing:-.018em;margin:0 0 10px}
+.teaching-description{font-size:.95rem;color:var(--muted);margin:0 0 24px;max-width:550px}
+.teaching-lectures-label{font-size:.83rem;font-weight:700;color:var(--ink);margin:0 0 7px}
+.teaching-lecture-list{border-top:1px solid var(--line)}
+.teaching-lecture{display:grid;grid-template-columns:42px minmax(0,1fr) 22px;gap:14px;align-items:center;border-bottom:1px solid var(--line);padding:14px 1px;text-decoration:none;transition:background .15s,color .15s}
+.teaching-lecture[href]:hover{background:#f7f5fa;color:#5f4d80}
+.teaching-lecture[href]:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.teaching-lecture-no{font-family:Georgia,serif;font-size:1.08rem;color:#83788d}
+.teaching-lecture-main{display:flex;flex-direction:column;gap:2px}
+.teaching-lecture-main strong{font-weight:600;font-size:.96rem;line-height:1.35}
+.teaching-lecture-main>span{font-size:.79rem;color:var(--muted)}
+.teaching-lecture-arrow{font-size:1.1rem;color:var(--accent);justify-self:end}
+.teaching-lecture-upcoming{opacity:.56}
+@media(max-width:750px){.teaching-layout{grid-template-columns:1fr;gap:12px}.teaching-experience{margin-top:0}.teaching-course{padding-top:18px}}
 </style>
 </head>
 <body>
@@ -103,24 +125,39 @@
 </div>
 <div class="agenda-line"><h3>Future Research</h3><p>Competition, market structure, and technology adoption in cybersecurity product markets.</p></div>
 </div></section>
-<section class="section" id="teaching"><div class="shell split-section"><div><h2>Teaching</h2></div><div class="teaching-copy"><p>My teaching experience is primarily in Principles of Economics and Microeconomics.</p><p>I am currently developing a course titled <em>Economics of Cybersecurity: Theory and Applications</em>, which will examine cybersecurity through economic models and empirical evidence.</p></div></div></section>
+<section class="section" id="teaching">
+  <div class="shell teaching-layout">
+    <div class="teaching-heading">
+      <h2>Teaching</h2>
+      <p class="teaching-small">Principles of Economics · Microeconomics</p>
+    </div>
+    <div class="teaching-content">
+      <p class="teaching-experience">Teaching experience at Tel Aviv University, the University of Haifa, and Sapir College.</p>
+      <div class="teaching-course">
+        <p class="teaching-kicker">COURSE IN DEVELOPMENT</p>
+        <h3>Economics of Cybersecurity: Theory and Applications</h3>
+        <p class="teaching-description">Economic incentives, security investment, information, and empirical evidence.</p>
+        <p class="teaching-lectures-label">Sample lectures</p>
+        <div class="teaching-lecture-list">
+          <a class="teaching-lecture" href="assets/economics-of-cybersecurity-lecture-1.pdf?v=20261111" target="_blank" rel="noopener noreferrer" aria-label="Open Lecture 1 PDF: Why Cybersecurity Is Hard">
+            <span class="teaching-lecture-no">01</span>
+            <span class="teaching-lecture-main"><strong>Why Cybersecurity Is Hard</strong><span>An economic perspective · PDF</span></span>
+            <span class="teaching-lecture-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="teaching-lecture" href="assets/economics-of-cybersecurity-lecture-2.pdf?v=20261111" target="_blank" rel="noopener noreferrer" aria-label="Open Lecture 2 PDF: Canonical Models of Security Investment">
+            <span class="teaching-lecture-no">02</span>
+            <span class="teaching-lecture-main"><strong>Canonical Models of Security Investment</strong><span>From one firm to many · PDF</span></span>
+            <span class="teaching-lecture-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section section-tinted" id="cv"><div class="shell split-section"><div><h2>CV</h2></div><div><a class="cv-download" href="assets/Dana_Etgar-Itzhaki_CV.pdf?v=20261110" target="_blank" rel="noopener">Curriculum Vitae ↗</a></div></div></section>
 <section class="section contact-section" id="contact"><div class="shell"><h2>Contact</h2><p>For academic correspondence, research collaborations, and seminar invitations:</p><p><a href="mailto:danaetgarit@gmail.com">danaetgarit@gmail.com</a></p></div></section>
 </main>
 <footer class="footer"><div class="shell"><span>© <span id="year"></span> Dana Etgar-Itzhaki</span><span>Economics research</span></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-  
-<script>
-  const diagram = document.querySelector('.swarm-diagram svg');
-
-  if (diagram) {
-    const image = document.createElement('img');
-    image.src = 'assets/pso-diagram.png?v=3';
-    image.className = 'swarm-figure';
-    image.alt = 'Particle Swarm Optimization';
-    diagram.replaceWith(image);
-  }
-</script>
-
 </body>
 </html>
