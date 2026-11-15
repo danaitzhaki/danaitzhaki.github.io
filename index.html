@@ -52,7 +52,7 @@
 .cv-download{font-weight:700;color:#69539b;text-underline-offset:5px}.cv-download:hover{color:#493470}
 
 /* Refinement: restrained academic typography and tighter section spacing */
-.hero h1 {font-size:clamp(2.65rem,4.45vw,4.1rem);line-height:1.12;margin-bottom:19px;letter-spacing:-.035em}
+.hero h1 {font-size:clamp(2.2rem,3.5vw,3.2rem);line-height:1.12;margin-bottom:19px;letter-spacing:-.035em}
 .section h2 {font-size:clamp(1.9rem,3.2vw,2.65rem);line-height:1.2;margin-bottom:18px;letter-spacing:-.025em}
 .section .group-title {font-size:1.38rem;letter-spacing:-.015em}
 .section h3:not(.group-title) {font-size:1.24rem}
@@ -60,8 +60,7 @@
 .contact-section {padding-top:80px;padding-bottom:80px}
 .research-shell .section-heading {margin-bottom:12px}
 .split-section>div:nth-child(2) {padding-top:15px}
-@media(max-width:750px){.hero h1{font-size:clamp(2.5rem,8vw,3.5rem)}.section{padding-top:55px;padding-bottom:55px}.split-section>div:nth-child(2){padding-top:0}}
-
+@media(max-width:750px){.hero h1{font-size:clamp(2rem,6.8vw,2.7rem)}.section{padding-top:55px;padding-bottom:55px}.split-section>div:nth-child(2){padding-top:0}}
 /* Teaching: compact academic course and lecture links */
 .teaching-layout{display:grid;grid-template-columns:minmax(180px,.8fr) minmax(0,1.3fr);gap:72px;align-items:start}
 .teaching-heading h2{margin-bottom:10px}
@@ -83,6 +82,10 @@
 .teaching-lecture-arrow{font-size:1.1rem;color:var(--accent);justify-self:end}
 .teaching-lecture-upcoming{opacity:.56}
 @media(max-width:750px){.teaching-layout{grid-template-columns:1fr;gap:12px}.teaching-experience{margin-top:0}.teaching-course{padding-top:18px}}
+
+/* Job-market paper abstract */
+.paper-entry .abstract-label{font-size:.8rem;font-weight:700;letter-spacing:.04em;color:#69539b;margin:13px 0 5px}
+.paper-entry .paper-abstract{max-width:820px;font-size:.94rem;line-height:1.68;color:#554d62;margin:0 0 11px}
 </style>
 </head>
 <body>
@@ -114,8 +117,8 @@
 <div class="section-heading"><h2>Research</h2></div>
 <div class="research-group">
 <h3 class="group-title">Working Papers</h3>
-<div class="paper-entry"><h4>How Do Cyber Attacks Impact Corporate Balance Sheets and Income Statements? An Empirical Study</h4><p class="authors">With Teyyub Mutallimov and Tyler Moore</p><p class="paper-summary">How do cyber incidents affect firms' financial performance and balance-sheet decisions? Evidence from firm-level financial data.</p></div>
-<div class="paper-entry"><h4><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6303062" rel="noopener noreferrer" target="_blank">The Impact of Ransomware Attacks on Security Portfolios: Firm-Level Panel Data</a></h4><p class="authors">With Abulfaz Hajizada, Noa Barnir, Tyler Moore, and Neil Gandal</p><p class="paper-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6303062" rel="noopener noreferrer" target="_blank">SSRN ↗</a> <span>·</span> <a href="https://cepr.org/publications/dp21219" rel="noopener noreferrer" target="_blank">CEPR Discussion Paper ↗</a></p><p class="paper-summary">How do ransomware attacks change firms' cybersecurity technology portfolios?</p></div>
+<div class="paper-entry"><h4>How Do Cyber Attacks Impact Corporate Balance Sheets and Income Statements? An Empirical Study</h4><p class="authors">With Teyyub Mutallimov and Tyler Moore</p><p class="abstract-label">Abstract</p><p class="paper-abstract">The economic consequences of cyber incidents remain difficult to measure. Existing research has largely focused on stock market reactions, leaving the effects on firms' actual financial performance and decisions less understood. We address this gap by linking cyber incident records to quarterly SEC financial statements of publicly traded U.S. firms from 2014 to 2025. Using a matched sample of 338 cyber incidents and a dynamic Difference-in-Differences design, we examine changes in corporate spending, investment, financing, and profitability following an attack.</p><p class="paper-abstract">We find that cyber incidents lead to persistent increases in operating expenditures, assets, and liabilities, alongside declines in earnings. Importantly, these effects differ substantially by attack type. Data breaches trigger a financing and investment response, with firms expanding their balance sheets to support recovery and remediation. In contrast, ransomware attacks primarily generate operational disruptions and earnings losses, without comparable balance sheet adjustments. Our findings highlight the heterogeneous economic consequences of cyber risk and reveal financial costs that are not fully captured by corporate disclosures.</p></div>
+<div class="paper-entry"><h4><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6303062" rel="noopener noreferrer" target="_blank">The Impact of Ransomware Attacks on Security Portfolios: Firm-Level Panel Data</a></h4><p class="authors">With Abulfaz Hajizada, Noa Barnir, Tyler Moore, and Neil Gandal</p><p class="paper-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6303062" rel="noopener noreferrer" target="_blank">SSRN ↗</a> <span>·</span> <a href="https://cepr.org/publications/dp21219" rel="noopener noreferrer" target="_blank">CEPR Discussion Paper ↗</a></p></div>
 </div>
 <div class="research-group wip-group">
 <h3 class="group-title">Work in Progress</h3>
